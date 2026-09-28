@@ -22,7 +22,8 @@
     "lint:fix": "eslint src/ tests/ --fix",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
   },
   "keywords": [
     "whoop",
@@ -63,6 +64,5 @@
     "tsx": "^4.19.4",
     "typescript": "~5.8.3",
     "vitest": "^4.1.11"
-  },
-  "prepare": "npm run build"
+  }
 }
