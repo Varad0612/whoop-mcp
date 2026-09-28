@@ -155,9 +155,7 @@ describe("fetchAllPages", () => {
   });
 
   it("returns truncated=true when maxRecords is hit exactly but a real next_token remains", async () => {
-    const { client } = createMockClient([
-      { records: makeRecords(1, 10), next_token: "token_2" },
-    ]);
+    const { client } = createMockClient([{ records: makeRecords(1, 10), next_token: "token_2" }]);
 
     const result = await fetchAllPages<MockRecord>(client, "/v2/recovery", {
       maxRecords: 10,
